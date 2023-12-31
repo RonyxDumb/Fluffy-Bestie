@@ -45,7 +45,7 @@ jobs:
           haxelib run lime rebuild hxcpp
 
       - name: Compile
-        run: haxelib run lime build android -final -D officialBuild
+        run: haxelib run lime build android -final
         env:
           cert_pass: nullfunni
           cert_alias_pass: nullfunni
