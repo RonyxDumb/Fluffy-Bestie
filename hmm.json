@@ -40,6 +40,11 @@
 		"type": "haxelib",
 		"version": null
 	  },
+          {
+                "name": "hscript",
+                "type": "haxelib",
+                "version": null
+          },
 	  {
 		"name": "extension-androidtools",
 		"type": "haxelib",
