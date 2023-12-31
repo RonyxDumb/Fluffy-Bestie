@@ -1,0 +1,9 @@
+# File in cui verrà specificato quali file escludere durante il caricamento del codice sorgente su github
+
+# Cartelle
+build/
+.haxelib/
+fluffy_Bestie_betabuild/
+
+# File/s
+# Nothing for now

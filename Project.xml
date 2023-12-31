@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xmlns="http://lime.openfl.org/project/1.0.4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://lime.openfl.org/project/1.0.4 http://lime.openfl.org/xsd/project-1.0.4.xsd">
+
+	<!-- 
+        FLUFFY BESTIE
+
+		AUTORE = RonyxDumb
+
+		MEMBRI = RonyxDumb (programmatore principale)
+		         Alessiox13 (collaboratore di idee)
+				 Ms. ??? (collaboratore di idee, propose l'idea originale)
+
+		INIZIO SVILUPPO = 19 Settembre 2023
+
+		LICENZA = Apache License 2.0
+	-->
+	
+    <!-- Impostazioni Applicazione -->
+    <meta title="Fluffy Bestie" packageName="com.ronyxdumb.fluffy" package="com.ronydumb.fluffy" version="1.0.0" company="RonyxDumb" />
+    <app file="FluffyBestie" main="Main" path="build" preloader="flixel.system.FlxPreloader" />
+
+    <!-- Impostazioni Schermo -->
+    <window width="1280" height="720" orientation="landscape" background="#000000" hardware="true" vsync="false" resizable="true" />
+	<window allow-high-dpi="true" unless="web" />
+	<window fullscreen="true" resizable="false" if="mobile || switch" />
+
+    <!-- Impostazioni Directory -->
+    <assets path="assets" />
+	<classpath path="source" />
+	<set name="BUILD_DIR" value="build/debug" if="debug" />
+	<set name="BUILD_DIR" value="build/release" unless="debug" />
+
+    <!-- Logo dell'Applicazione -->
+    <icon path="art/icon.png" />
+
+    <!-- Librerie -->
+	<haxelib name="flixel" />
+	<haxelib name="flixel-addons" />
+    <haxelib name="flixel-ui" />
+    <haxelib name="openfl"/>
+    <haxelib name="extension-androidtools" if="android" />
+    <haxelib name="vibradroid" if="android" />
+	<haxelib name="hscript" />
+
+	<!-- Supprto ai video MP4 -->
+    <section if="cpp">
+		<haxelib name="hxvlc" if="desktop || android" />
+	</section>
+
+	<!-- Supporto a GameJolt -->
+	<!-- haxelib name="tentools" / -->
+    <!-- haxelib name="systools" / -->
+    <!-- ndll name="systools" haxelib="systools" / -->
+
+    <!-- Definizioni -->
+    <section if="cpp">
+		<haxedef name="HXCPP_CHECK_POINTER" if="cpp" />
+		<haxedef name="HXCPP_STACK_LINE" if="cpp" />
+		<haxedef name="HXCPP_STACK_TRACE" if="cpp" />
+	</section>
+
+	<!--Disable the Flixel core focus lost screen-->
+	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
+
+    <undefine name="openfl-disable-handle-error" if="debug" />
+
+    <!-- Android Esport Config -->
+    <section if="mobile">
+		    <!--Target SDK--> 
+		    <android target-sdk-version="29" if="${lime &lt; 8.1.0}" />
+	</section>
+
+	<!-- Ios Esport Config -->
+	<section if="ios">
+		<!--Dependency--> 
+		<dependency name="Metal.framework" if="${lime &lt; 8.0.0}" />
+	</section>
+</project>
