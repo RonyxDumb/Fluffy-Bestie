@@ -2,7 +2,7 @@
 color 0a
 cd ..
 @echo on
-cd FluffyBestie
+cd Fluffy-Bestie
 echo Rebuilding Systools
 haxelib run lime rebuild systools windows
 echo Finished Systools rebuild
