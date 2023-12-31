@@ -98,9 +98,9 @@ class MenuState extends FlxState
             var menuItems:FlxText = MENU_ITEMS[i];
 
             if (i == selectedOption) {
-                menuItems.color = SELECTED_COLOR;
+                menuItems.color = SELECTED_COLOR; // quando selezioni un elemento, il colore sarà rosso
             } else {
-                menuItems.color = UNSELECTED_COLOR;
+                menuItems.color = UNSELECTED_COLOR; // caso contrario, in caso di non selezionamento, sarà bianco
             }
             
         });
