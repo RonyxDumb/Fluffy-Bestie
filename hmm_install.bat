@@ -2,7 +2,7 @@
 color 0a
 cd ..
 @echo on
-cd FluffyBestie
+cd Fluffy-Bestie
 echo Installing Libreries
 haxelib install hmm
 echo Running Libreries installation
