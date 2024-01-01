@@ -44,9 +44,7 @@ class Main extends Sprite
 		Lib.current.addChild(new Main());
 	}
 
-	// quando compili il gioco, genera un file chiamato
-	// "BUILDTIME" in cui verrà scritto:
-	// - Data
+ // All'avvio dell'APP, scrivi l'ora attuale
 	// - Directory
 	static function infoTerminal()
 	{
